@@ -1,8 +1,11 @@
 /**
+ * Determine whether an integer is a palindrome. An integer is a palindrome
+ * when it reads the same backward as forward.
+ * Coud you solve it without converting the integer to a string?
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function(x) {
+const isPalindrome = x => {
   if (x < 0 || (x && x % 10 == 0)) return false
   let reversed = 0
   while (x > reversed) {
