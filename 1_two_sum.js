@@ -3,9 +3,9 @@
  * such that they add up to a specific target.
  * You may assume that each input would have exactly one solution,
  * and you may not use the same element twice.
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+ * @param   {number[]}  nums
+ * @param   {number}    target
+ * @return  {number[]}
  */
 const twoSum = (nums, target) => {
   const map = {}
