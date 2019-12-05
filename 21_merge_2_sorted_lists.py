@@ -41,4 +41,4 @@ list_b.next = ListNode(3)
 list_b.next.next = ListNode(4)
 
 print_linked_list(merge_two_lists(list_a, list_b))
-# 1, 1, 2, 3, 4, 4
+# 1 -> 1 -> 2 -> 3 -> 4 -> 4

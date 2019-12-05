@@ -16,7 +16,7 @@ def merge_k_lists(lists: List[ListNode]) -> ListNode:
     heapify(h)
     head = cur = ListNode(None)
     while h:
-        val, node_id, node = heappop(h)
+        _, __, node = heappop(h)
         cur.next = node
         cur = cur.next
         node = node.next
@@ -47,10 +47,10 @@ list_c = ListNode(2)
 list_c.next = ListNode(6)
 
 arr = [
-    list_a,  # 1->4->5
-    list_b,  # 1->3->4,
-    list_c   # 2->6
+    list_a,  # 1 -> 4 -> 5
+    list_b,  # 1 -> 3 -> 4
+    list_c   # 2 -> 6
 ]
 
 print_linked_list(merge_k_lists(arr))
-# 1, 1, 2, 3, 4, 4, 5, 6
+# 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6
