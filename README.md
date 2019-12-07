@@ -1,6 +1,6 @@
 # 1337code
 
-- This repository contains my solutions for problems on Leetcode.
+- This repository contains my solutions for various problems on Leetcode.
 
 ## Author
 
