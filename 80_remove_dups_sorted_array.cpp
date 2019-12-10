@@ -8,7 +8,6 @@ using namespace std;
  * duplicates appeared at most twice and return the new length.
  * Do not allocate extra space for another array, you must do this by
  * modifying the input array in-place with O(1) extra memory. 
- * 
  */
 int removeDuplicates(vector<int> &nums)
 {
@@ -22,6 +21,6 @@ int removeDuplicates(vector<int> &nums)
 int main()
 {
     vector<int> arr{1, 1, 1, 2, 2, 3};
-    cout << removeDuplicates(arr) << endl;
+    cout << removeDuplicates(arr) << endl; // 5
     return 0;
 }
