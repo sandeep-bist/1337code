@@ -20,4 +20,5 @@ int main()
     int arr[] = {1, 1, 1, 2, 2, 3};
     int size = sizeof(arr) / sizeof(int);
     printf("%i\n", removeDuplicates(arr, size)); // 5
+    return 0;
 }
