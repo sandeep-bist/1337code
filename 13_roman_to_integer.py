@@ -8,10 +8,7 @@ def roman_to_int(s: str) -> int:
     sum = prev = 0
     for i in s[::-1]:
         curr = hash_map[i]
-        if curr < prev:
-            sum -= curr
-        else:
-            sum += curr
+        sum += curr if curr > prev else -curr
         prev = curr
     return sum
 
