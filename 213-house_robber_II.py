@@ -28,3 +28,7 @@ def rob(nums: List[int]) -> int:
         prev = curr
         curr = temp
     return curr
+
+
+print(rob_again([1, 2, 3, 1]))  # 4
+print(rob_again([1, 2, 3, 1, 5]))  # 8
