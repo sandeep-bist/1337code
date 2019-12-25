@@ -20,5 +20,8 @@ def rob(nums: List[int]) -> int:
     return curr
 
 
-print(rob([1, 2, 3, 1]))  # 4
-print(rob([2, 7, 9, 3, 1]))  # 12
+arr = [1, 2, 3, 1]
+print(rob(arr))  # 4
+
+arr2 = [2, 7, 9, 3, 1]
+print(rob(arr2))  # 12
