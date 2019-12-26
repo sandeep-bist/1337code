@@ -2,14 +2,14 @@ from typing import List
 
 
 class DSU:
-    def __init__(self, n):
+    def __init__(self, n: int):
         """
         Disjoint Set constructor.
         """
         self.parents = [i for i in range(n)]
         self.count = 0
 
-    def find(self, x):
+    def find(self, x: int) -> int:
         """
         Finds parent of element with path compression functionality.
         """
@@ -17,7 +17,7 @@ class DSU:
             self.parents[x] = self.find(self.parents[x])
         return self.parents[x]
 
-    def union(self, x, y):
+    def union(self, x: int, y: int):
         """
         Combines parent of two elements if they do not match.
         """
