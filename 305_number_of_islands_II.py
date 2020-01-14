@@ -28,6 +28,9 @@ class DSU:
             self.parents[par_x] = par_y
 
     def add(self, x: int):
+        """
+        Adds an element into DSU.
+        """
         if x in self.parents:
             return
         self.parents[x] = x
