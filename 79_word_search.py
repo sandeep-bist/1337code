@@ -36,3 +36,4 @@ def dfs(board: List[List[str]], i: int, j: int, count: int, word: str):
 
 matrix = [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
 print(exist(matrix, "ABCCED"))  # True
+print(exist(matrix, "ABCD"))  # False
