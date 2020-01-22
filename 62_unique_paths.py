@@ -14,4 +14,4 @@ def unique_paths(m: int, n: int) -> int:
     return dp[-1][-1]
 
 
-print(unique_paths(3, 2,))  # 3
+print(unique_paths(3, 2))  # 3
