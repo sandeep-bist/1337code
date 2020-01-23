@@ -1,7 +1,7 @@
 from typing import List
 
 
-def twoSum(nums: List[int], target: List[int]) -> list:
+def two_sum(nums: List[int], target: List[int]) -> list:
     """
     Given an array of integers, return indices of the two numbers
     such that they add up to a specific target.
@@ -18,4 +18,4 @@ def twoSum(nums: List[int], target: List[int]) -> list:
     return []
 
 
-print(twoSum([2, 7, 11, 15], 9))  # [0, 1]
+print(two_sum([2, 7, 11, 15], 9))  # [0, 1]
