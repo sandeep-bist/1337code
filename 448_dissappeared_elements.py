@@ -1,7 +1,7 @@
 from typing import List
 
 
-def find_disappeared_numbers(self, nums: List[int]) -> List[int]:
+def find_disappeared_numbers(nums: List[int]) -> List[int]:
     """
     Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some
     elements appear twice and others appear once. Find all the elements of
