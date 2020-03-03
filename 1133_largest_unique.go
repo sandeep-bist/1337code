@@ -28,6 +28,6 @@ func largestUniqueNumber(arr []int) int {
 }
 
 func main {
-	arr := []int{5,7,3,9,4,9,8,3,1}
+    arr := []int{5, 7, 3, 9, 4, 9, 8, 3, 1}
     fmt.Println(largestUniqueNumber(arr))
 }
