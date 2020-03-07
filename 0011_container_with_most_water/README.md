@@ -7,7 +7,7 @@ forms a container, such that the container contains the most water.
 
 Note: You may not slant the container and n is at least 2.
 
-![question_11](question_11.png "Question 11")
+![question_11](./question_11.jpg "Question 11")
 
 The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].
 In this case, the max area of water (blue section) the container can
