@@ -51,4 +51,4 @@ Easy
 
 ### Tags
 
-string stack hash-table
+#string #stack #hash-table

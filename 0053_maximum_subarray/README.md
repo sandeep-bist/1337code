@@ -20,4 +20,4 @@ Easy
 
 ### Tags
 
-array kadane
+#array #dynamic-programming #kadane

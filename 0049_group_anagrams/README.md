@@ -24,5 +24,5 @@ Medium
 
 ### Tags
 
-string hash-table
+#string #hash-table
 

@@ -22,4 +22,4 @@ Medium
 
 ### Tags
 
-linked-list mergesort recursion
+#linked-list

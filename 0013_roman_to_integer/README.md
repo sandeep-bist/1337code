@@ -74,4 +74,4 @@ Easy
 
 ### Tags
 
-math string hash-table
+#math #string #hash-table
