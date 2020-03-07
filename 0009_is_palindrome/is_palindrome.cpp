@@ -6,7 +6,7 @@ using namespace std;
  * Time: O(n)
  * Space: O(1)
  */
-bool isPalindrome(int x)
+bool is_palindrome(int x)
 {
     if (x < 0 || (x && x % 10 == 0))
         return false;
