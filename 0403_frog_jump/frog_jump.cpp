@@ -39,14 +39,3 @@ bool can_cross(vector<int> &stones)
     }
     return false;
 }
-
-int main()
-{
-    vector<int> arr{0, 1, 3, 5, 6, 8, 12, 17};
-    cout << can_cross(arr) << endl; // 1
-
-    vector<int> arr2{0, 1, 2, 3, 4, 8, 9, 11};
-    cout << can_cross(arr2) << endl; // 0
-
-    return 0;
-}
