@@ -4,11 +4,8 @@
 using namespace std;
 
 /**
- * Given a m x n grid filled with non-negative numbers, find a path from
- * top left to bottom right which minimizes the sum of all numbers along
- * its path.
- * You can only move either down or right at any point in time.
- * O(n * m) space. Can optimize for O(1) if one modifies given matrix.
+ * Time: O(m * n)
+ * Space: O(1)
  */
 int min_path_sum(vector<vector<int>> &grid)
 {
