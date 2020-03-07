@@ -14,9 +14,6 @@ public:
     }
 };
 
-/**
- * Helper.
- */
 ListNode *add_two_numbers_helper(ListNode *l1, ListNode *l2, int carry)
 {
     if (!l1 && !l2 && !carry)
@@ -31,38 +28,10 @@ ListNode *add_two_numbers_helper(ListNode *l1, ListNode *l2, int carry)
 }
 
 /**
- * Given an array of integers, return indices of the two numbers 
- * such that they add up to a specific target. 
- * You may assume that each input would have exactly one solution,
- * and you may not use the same element twice.
+ * Time: O(m + n)
+ * Space: O(m + n)
  */
 ListNode *add_two_numbers(ListNode *l1, ListNode *l2)
 {
     return add_two_numbers_helper(l1, l2, 0);
-}
-
-int main()
-{
-    ListNode n1(2);
-    ListNode n2(4);
-    ListNode n3(3);
-
-    n1.next = &n2;
-    n2.next = &n3;
-
-    ListNode n4(5);
-    ListNode n5(6);
-    ListNode n6(4);
-
-    n4.next = &n5;
-    n5.next = &n6;
-
-    ListNode *res = add_two_numbers(&n1, &n4);
-    while (res)
-    {
-        cout << res->val << " ";
-        res = res->next;
-    }
-    /* 7 0 8 */
-    return 0;
 }

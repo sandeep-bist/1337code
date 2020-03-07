@@ -1,8 +1,8 @@
 /**
  * Time: O(m * n)
  * Space: O(1)
- * @param {number[][]} grid
- * @return {number}
+ * @param   {number[][]} grid
+ * @return  {number}
  */
 const minPathSum = grid => {
   const r = grid.length

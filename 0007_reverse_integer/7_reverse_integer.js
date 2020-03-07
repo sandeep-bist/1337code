@@ -1,7 +1,8 @@
 /**
- * Given a 32-bit signed integer, reverse digits of an integer.
- * @param {number} x
- * @return {number}
+ * Time:    O(n)
+ * Space:   O(1)
+ * @param   {number} x
+ * @return  {number}
  */
 const reverse = x => {
   const INT_MAX = 2 ** 31 - 1
@@ -15,7 +16,3 @@ const reverse = x => {
   }
   return res < INT_MAX && res > INT_MIN ? res : 0
 }
-
-console.log(reverse(123)) // 321
-console.log(reverse(120)) // 21
-console.log(reverse(-914)) // -419

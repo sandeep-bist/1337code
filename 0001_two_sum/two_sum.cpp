@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/**
+ * Time: O(n)
+ * Space: O(n)
+ */
 vector<int> two_sum(vector<int> &nums, int target)
 {
     vector<int> res;
@@ -20,11 +24,4 @@ vector<int> two_sum(vector<int> &nums, int target)
         map[nums[i]] = i;
     }
     return res;
-}
-
-int main()
-{
-    vector<int> arr{2, 7, 11, 15};
-    for (auto i : two_sum(arr, 9))
-        cout << i << " "; // 1 0
 }
