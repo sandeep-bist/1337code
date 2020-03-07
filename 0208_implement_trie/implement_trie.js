@@ -58,11 +58,3 @@ class Trie {
     return true
   }
 }
-
-const t = new Trie()
-t.insert("hello")
-t.insert("hey")
-console.log(t.search("hello")) // true
-console.log(t.search("hey")) // true
-console.log(t.search("he")) // false
-console.log(t.startsWith("he")) // true

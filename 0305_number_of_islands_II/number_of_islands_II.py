@@ -39,13 +39,8 @@ class DSU:
 
 def num_islands2(m: int, n: int, positions: List[List[int]]):
     """
-    A 2d grid map of m rows and n columns is initially filled with water.
-    We may perform an addLand operation which turns the water at position
-    (row, col) into a land. Given a list of positions to operate, count the
-    number of islands after each addLand operation. An island is surrounded
-    by water and is formed by connecting adjacent lands horizontally or
-    vertically. You may assume all four edges of the grid are all surrounded
-    by water.
+    Time: O(m * n + L) where L is the number of operations
+    Space: O(m * n)
     """
     surroundings = [(0, 1), (1, 0), (-1, 0), (0, -1)]
     dsu = DSU()
@@ -60,10 +55,3 @@ def num_islands2(m: int, n: int, positions: List[List[int]]):
                 dsu.union(key, row * n + col)
         res.append(dsu.count)
     return res
-
-
-arr = [[0, 0], [0, 1], [1, 2], [2, 1]]
-print(num_islands2(3, 3, arr))  # [1, 1, 2, 3]
-
-arr2 = [[0, 0], [0, 1], [1, 2], [1, 2]]
-print(num_islands2(3, 3, arr2))  # [1, 1, 2, 2]

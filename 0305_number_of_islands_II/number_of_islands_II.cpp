@@ -50,13 +50,8 @@ void DSU::add(int x)
 }
 
 /**
- * A 2d grid map of m rows and n columns is initially filled with water.
- * We may perform an addLand operation which turns the water at position
- * (row, col) into a land. Given a list of positions to operate, count the
- * number of islands after each addLand operation. An island is surrounded
- * by water and is formed by connecting adjacent lands horizontally or
- * vertically. You may assume all four edges of the grid are all surrounded
- * by water.
+ * Time: O(m * n + L) where L is the number of operations
+ * Space: O(m * n)
  */
 vector<int> num_islands2(int m, int n, vector<vector<int>> positions)
 {
@@ -78,25 +73,4 @@ vector<int> num_islands2(int m, int n, vector<vector<int>> positions)
         res.push_back(dsu.count);
     }
     return res;
-}
-
-int main()
-{
-    vector<vector<int>> arr{{0, 0},
-                            {0, 1},
-                            {1, 2},
-                            {2, 1}};
-    vector<int> res = num_islands2(3, 3, arr);
-    for (auto i : res)
-        cout << i << " "; // 1, 1, 2, 3
-    cout << endl;
-
-    vector<vector<int>> arr2{{0, 0},
-                             {0, 1},
-                             {1, 2},
-                             {1, 2}};
-    vector<int> res2 = num_islands2(3, 3, arr2);
-    for (auto i : res2)
-        cout << i << " "; // 1, 1, 2, 2
-    return 0;
 }

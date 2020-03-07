@@ -47,13 +47,3 @@ class Trie:
                 return False
             curr = curr.children.get(char)
         return True
-
-
-t = Trie()
-t.insert('hello')
-t.insert('hey')
-print(t.search('hello'))  # True
-print(t.search('hey'))  # True
-print(t.search('he'))  # False
-print(t.search('heyy'))  # False
-print(t.starts_with('he'))  # True

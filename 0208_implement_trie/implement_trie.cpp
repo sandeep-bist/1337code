@@ -67,15 +67,3 @@ bool Trie::starts_with(string prefix)
     }
     return true;
 }
-
-int main()
-{
-    Trie t;
-    t.insert("hello");
-    t.insert("hey");
-    cout << t.search("hello") << endl;   // 1
-    cout << t.search("hey") << endl;     // 1
-    cout << t.search("he") << endl;      // 0
-    cout << t.starts_with("he") << endl; // 1
-    return 0;
-}

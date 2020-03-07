@@ -4,17 +4,14 @@ from typing import List
 
 def find_kth_largest(nums: List[int], k: int) -> int:
     """
-    Find the kth largest element in an unsorted array. Note that it is the kth
-     largest element in the sorted order, not the kth distinct element.
+    Time: O(n)
+    Space: O(1)
     """
     size = len(nums)
     return select(nums, 0, size - 1, size - k)
 
 
 def select(nums: List[int], l: int, r: int, k: int) -> int:
-    """
-    Quick-select algorithm.
-    """
     if l == r:
         return nums[l]
     random = randint(l, r)
@@ -28,9 +25,6 @@ def select(nums: List[int], l: int, r: int, k: int) -> int:
 
 
 def partition(nums: List[int], l: int, r: int, p: int) -> int:
-    """
-    Partitions an array with random pivot.
-    """
     pivot = nums[p]
     nums[p], nums[r] = nums[r], nums[p]
     i = l
@@ -40,7 +34,3 @@ def partition(nums: List[int], l: int, r: int, p: int) -> int:
             i += 1
     nums[r], nums[i] = nums[i], nums[r]
     return i
-
-
-arr = [3, 2, 1, 5, 6, 4]
-print(find_kth_largest(arr, 2))  # 5
