@@ -4,9 +4,6 @@
 
 using namespace std;
 
-/**
- * Knuth-Morris-Pratt string-searching algorithm. 
- */
 vector<int> kmp_preprocess(string needle)
 {
     int i = 0, j = 1, size = needle.size();
@@ -30,8 +27,8 @@ vector<int> kmp_preprocess(string needle)
 }
 
 /**
- * Return the index of the first occurrence of needle in haystack, or -1 if
- * needle is not part of haystack.
+ * Time: O(m + n)
+ * Space: O(m)
  */
 int strstr(string needle, string haystack)
 {
@@ -49,10 +46,4 @@ int strstr(string needle, string haystack)
             h++;
     }
     return n == needle.size() ? h - n : -1;
-}
-
-int main()
-{
-    cout << strstr("ll", "hello") << endl; // 2
-    return 0;
 }
