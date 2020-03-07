@@ -9,11 +9,24 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+int size(ListNode *head)
+{
+    ListNode *tmp = head;
+    int i = 0;
+
+    while (tmp)
+    {
+        i++;
+        tmp = tmp->next;
+    }
+    return i;
+}
+
 /**
- * Write a program to find the node at which the intersection of two singly
- * linked lists begins.
+ * Time: O(m + n)
+ * Space: O(1)
  */
-ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
+ListNode *get_intersection_node(ListNode *headA, ListNode *headB)
 {
     int sizeA, sizeB, diff;
     ListNode *big, *small;
@@ -41,20 +54,4 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
         small = small->next;
     }
     return NULL;
-}
-
-/**
- * Returns size of a singly linked list. 
- */
-int size(ListNode *head)
-{
-    ListNode *tmp = head;
-    int i = 0;
-
-    while (tmp)
-    {
-        i++;
-        tmp = tmp->next;
-    }
-    return i;
 }

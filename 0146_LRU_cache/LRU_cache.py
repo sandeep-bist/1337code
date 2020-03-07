@@ -1,13 +1,10 @@
 from collections import OrderedDict
 
-# first solution with doubly-linked lists
+# doubly-linked lists
 
 
 class ListNode:
     def __init__(self, key: int, value: str):
-        """
-        ListNode constructor.
-        """
         self.key = key
         self.value = value
         self.next = None
@@ -17,7 +14,7 @@ class ListNode:
 class LRUCache:
     def __init__(self, capacity: int):
         """
-        LRU cache.
+        LRU cache constructor.
         """
         self.capacity = capacity
         self.size = 0
@@ -25,7 +22,7 @@ class LRUCache:
         self.tail = None
         self.hash_map = {}
 
-    def get(self, key: int) -> int:
+    def get(self, key: int) -> str:
         """
         Gets the value stored at given key. Moves key to the front of cache.
         """
@@ -51,7 +48,7 @@ class LRUCache:
             self.evict()
         self.insert_to_head(key, value)
 
-    def is_full(self):
+    def is_full(self) -> bool:
         """
         Determines if cache is full or not.
         """
@@ -98,7 +95,7 @@ class LRUCache:
             self.tail.next = None
         self.size -= 1
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         String representation.
         """
@@ -112,17 +109,17 @@ class LRUCache:
         return res
 
 
-# second solution with ordered dicts
+# ordered dicts
 
 class LRUCacheOD:
-    def __init__(self, Capacity):
+    def __init__(self, capacity: int):
         """
-        LRUCache constructor with Ordered Dicts.
+        LRU cache constructor with Ordered Dicts.
         """
-        self.size = Capacity
+        self.size = capacity
         self.cache = OrderedDict()
 
-    def get(self, key):
+    def get(self, key: int) -> str:
         """
         Gets the value stored at given key. Moves key to the front of cache.
         """
@@ -132,7 +129,7 @@ class LRUCacheOD:
         self.cache.move_to_end(key)
         return val
 
-    def put(self, key, val):
+    def put(self, key: int, val: str):
         """
         Inserts a key, value pair into the cache if it does not exist.
         Otherwise, updates the current key.
@@ -143,33 +140,3 @@ class LRUCacheOD:
         self.cache[key] = val
         if len(self.cache) > self.size:
             self.cache.popitem(last=False)
-
-
-obj = LRUCache(2)
-obj.put(2, "1")
-obj.put(2, "2")
-print(obj)  # 2
-print(obj.get(2))  # 2
-obj.put(1, "1")
-print(obj)  # 1 <-> 2
-obj.put(4, "1")
-print(obj)  # 4 <-> 1
-print(obj.get(2))  # -1
-
-obj = LRUCache(3)
-obj.put(3, "cherries")
-print(obj)  # 3
-obj.put(4, "dikon")
-obj.put(5, "eggplants")
-obj.put(6, "fruits")
-print(obj)  # 6 <-> 5 <-> 4
-obj.put(1, "apples")
-print(obj.get(1))  # apples
-print(obj)  # 1 <-> 6 <-> 5
-print(obj.get(6))  # fruits
-print(obj.get(2))  # -1
-print(obj)  # 6 <-> 1 <-> 5
-obj.put(7, "grapefruit")
-print(obj)  # 7 <-> 6 <-> 1
-print(obj.get(6))  # fruits
-print(obj)  # 6 <-> 7 <-> 1
