@@ -1,6 +1,8 @@
-/*
-Table: Person
+# Combine Two Tables
 
+Table: `Person`
+
+```
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -9,9 +11,11 @@ Table: Person
 | LastName    | varchar |
 +-------------+---------+
 PersonId is the primary key column for this table.
+```
 
-Table: Address
+Table: `Address`
 
+```
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -21,15 +25,18 @@ Table: Address
 | State       | varchar |
 +-------------+---------+
 AddressId is the primary key column for this table.
+```
 
-Write a SQL query for a report that provides the following information for
-each person in the Person table, regardless if there is an address for each
-of those people:
+Write a SQL query for a report that provides the following information for each
+person in the Person table, regardless if there is an address for each of
+those people:
 
-FirstName, LastName, City, State
-*/
+`FirstName, LastName, City, State`
 
-SELECT FirstName, LastName, City, State
-FROM Person LEFT JOIN Address
-ON Person.PersonId = Address.PersonId;
+### Difficulty
 
+Easy
+
+### Tags
+
+#sql
