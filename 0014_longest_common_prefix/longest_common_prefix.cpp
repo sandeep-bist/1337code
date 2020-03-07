@@ -5,8 +5,8 @@
 using namespace std;
 
 /**
- * Write a function to find the longest common prefix string amongst an array
- * of strings. If there is no common prefix, return an empty string "".
+ * Time: O(m * n)
+ * Space: O(1)
  */
 string longestCommonPrefix(vector<string> &strs)
 {
@@ -21,15 +21,4 @@ string longestCommonPrefix(vector<string> &strs)
                 return first.substr(0, i);
     }
     return first;
-}
-
-int main()
-{
-    vector<string> strings{"flower", "flow", "flight"};
-    cout << longest_common_prefix(strings) << endl; // fl
-
-    vector<string> strings2{"aa", "aa"};
-    cout << longest_common_prefix(strings2) << endl; // aa
-
-    return 0;
 }

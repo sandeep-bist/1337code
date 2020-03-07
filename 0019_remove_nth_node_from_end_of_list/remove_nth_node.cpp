@@ -15,8 +15,8 @@ public:
 };
 
 /**
- * Given a linked list, remove the n-th node from the end of list and return
- * its head.
+ * Time: O(n)
+ * Space: O(1)
  */
 ListNode *remove_nth_from_end(ListNode *head, int n)
 {
@@ -35,26 +35,4 @@ ListNode *remove_nth_from_end(ListNode *head, int n)
     }
     tort->next = tort->next->next;
     return head;
-}
-
-int main()
-{
-    ListNode n1(1);
-    ListNode n2(2);
-    ListNode n3(3);
-    ListNode n4(4);
-    ListNode n5(5);
-
-    n1.next = &n2;
-    n2.next = &n3;
-    n3.next = &n4;
-    n4.next = &n5;
-
-    ListNode *res = remove_nth_from_end(&n1, 2);
-    while (res)
-    {
-        cout << res->val << " "; // 1 2 3 5
-        res = res->next;
-    }
-    return 0;
 }

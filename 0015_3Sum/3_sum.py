@@ -3,10 +3,8 @@ from typing import List
 
 def three_sum(nums: List) -> List:
     """
-    Given an array nums of n integers, are there elements a, b, c in nums such
-    that a + b + c = 0? Find all unique triplets in the array which gives the
-    sum of zero.
-    The solution set must not contain duplicate triplets.
+    Time: O(n log(n)) * n
+    Space: O(n)
     """
     res = []
     nums.sort()
@@ -32,7 +30,3 @@ def three_sum(nums: List) -> List:
                 left += 1
                 right -= 1
     return res
-
-
-print(three_sum([-1, 0, 1, 2, -1, -4]))
-# [[-1, -1, 2], [-1, 0, 1]]

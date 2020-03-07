@@ -6,8 +6,8 @@ class ListNode {
 }
 
 /**
- * Given a linked list, remove the n-th node from the end of list and return
- * its head.
+ * Time:    O(n)
+ * Space:   O(1)
  * @param   {ListNode}  head
  * @param   {number}    n
  * @returns {ListNode}
@@ -26,21 +26,4 @@ const removeNthNode = (head, n) => {
   }
   if (tort.next) tort.next = tort.next.next
   return head
-}
-
-const n1 = new ListNode(1)
-const n2 = new ListNode(2)
-const n3 = new ListNode(3)
-const n4 = new ListNode(4)
-const n5 = new ListNode(5)
-
-n1.next = n2
-n2.next = n3
-n3.next = n4
-n4.next = n5
-
-let tmp = removeNthNode(n1, 3)
-while (tmp) {
-  console.log(tmp.val) // 1, 2, 4, 5
-  tmp = tmp.next
 }

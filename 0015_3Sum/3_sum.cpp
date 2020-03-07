@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/**
+ * Time: O(n * log(n)) * n
+ * Space: O(n)
+ */
 vector<vector<int>> three_sum(vector<int> &nums)
 {
     vector<vector<int>> res;
@@ -36,20 +40,4 @@ vector<vector<int>> three_sum(vector<int> &nums)
         }
     }
     return res;
-}
-
-int main()
-{
-    vector<int> arr{-1, 0, 1, 2, -1, -4};
-    vector<vector<int>> res = three_sum(arr);
-    for (auto sub : res)
-    {
-        for (auto i : sub)
-            cout << i << " ";
-        cout << endl;
-    }
-    /* 
-    -1 -1 2
-    -1 0 1
-    */
 }

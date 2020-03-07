@@ -2,11 +2,13 @@
 #include <string>
 #include <unordered_map>
 
+using namespace std;
+
 /**
- * Given a roman numeral, convert it to an integer. Input is guaranteed to be
- * within the range from 1 to 3999.
+ * Time: O(n)
+ * Space: O(1)
  */
-int romanToInt(string s)
+int roman_to_int(string s)
 {
     unordered_map<char, int> map = {
         {'I', 1},
@@ -24,11 +26,4 @@ int romanToInt(string s)
         prev = curr;
     }
     return sum;
-}
-
-int main()
-{
-    cout << romanToInt("MCMXCIV") << endl; // 1994
-    cout << romanToInt("IX") << endl;      // 9
-    return 0;
 }

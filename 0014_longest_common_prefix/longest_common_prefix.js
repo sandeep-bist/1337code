@@ -1,7 +1,8 @@
 /**
- * Write a function to find the longest common prefix string amongst an array of strings.
- * If there is no common prefix, return an empty string "".
+ * Time:    O(m * n)
+ * Space:   O(1)
  * @param   {string[]} strings
+ * @return  {string}
  */
 const longest_common_prefix = strings => {
   if (!strings.length) return ""
@@ -13,9 +14,3 @@ const longest_common_prefix = strings => {
   }
   return first
 }
-
-let strings = ["flower", "flow", "flight"] // fl
-console.log(longest_common_prefix(strings))
-
-strings = ["aa", "aa"] // aa
-console.log(longest_common_prefix(strings))

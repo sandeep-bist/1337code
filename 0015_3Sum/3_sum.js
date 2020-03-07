@@ -1,9 +1,7 @@
 /**
- * Given an array nums of n integers, are there elements a, b, c in nums such
- * that a + b + c = 0? Find all unique triplets in the array which gives the
- * sum of zero.
- * The solution set must not contain duplicate triplets.
- * @param   {number[]}      nums
+ * Time:    O(n * log(n)) * n
+ * Space:   O(n)
+ * @param   {number[]}    nums
  * @return  {number[][]}
  */
 const threeSum = nums => {
@@ -28,6 +26,3 @@ const threeSum = nums => {
   }
   return res
 }
-
-const arr = [-1, 0, 1, 2, -1, -4]
-console.log(threeSum(arr)) // [[-1,-1,2],[-1,0,1]]
