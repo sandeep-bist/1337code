@@ -4,9 +4,6 @@
 
 using namespace std;
 
-/**
- * Depth-first search.
- */
 void dfs(vector<int> &nums, vector<int> &sub, int index, int target,
          vector<vector<int>> &res)
 {
@@ -26,11 +23,8 @@ void dfs(vector<int> &nums, vector<int> &sub, int index, int target,
 }
 
 /**
- * Given a set of candidate numbers (candidates) (without duplicates) and a
- * target number (target), find all unique combinations in candidates where
- * the candidate numbers sums to target.
- * The same repeated number may be chosen from candidates unlimited number
- * of times.
+ * Time: O(n * log(n) + 2**n)
+ * Space: O(n**2)
  */
 vector<vector<int>> combination_sum(vector<int> &candidates, int target)
 {
@@ -39,19 +33,4 @@ vector<vector<int>> combination_sum(vector<int> &candidates, int target)
     sort(candidates.begin(), candidates.end());
     dfs(candidates, sub, 0, target, res);
     return res;
-}
-
-int main()
-{
-    vector<int> arr{2, 3, 6, 7};
-    vector<vector<int>> res = combination_sum(arr, 7);
-    for (auto s : res)
-    {
-        for (auto i : s)
-            cout << i << " ";
-        cout << endl;
-    }
-    // 2 2 3
-    // 7
-    return 0;
 }

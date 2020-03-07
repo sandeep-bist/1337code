@@ -3,9 +3,8 @@ from typing import List
 
 def trap(height: List[int]) -> int:
     """
-    Given n non-negative integers representing an elevation map where the
-    width of each bar is 1, compute how much water it is able to trap after
-    raining.
+    Time: O(n)
+    Space: O(1)
     """
     l = 0
     r = len(height) - 1
@@ -24,12 +23,3 @@ def trap(height: List[int]) -> int:
                 res += r_max - height[r]
             r -= 1
     return res
-
-
-arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
-"""
-       |
-   |   || |
-_|_||_||||||
-"""
-print(trap(arr))  # 6

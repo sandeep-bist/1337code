@@ -3,8 +3,8 @@ from typing import List
 
 def max_sub_array(nums: List[int]) -> int:
     """
-    Given an integer array nums, find the contiguous subarray (containing
-    at least one number) which has the largest sum and return its sum.
+    Time: O(n)
+    Space: O(1)
     """
     if not len(nums):
         return 0
@@ -17,16 +17,10 @@ def max_sub_array(nums: List[int]) -> int:
 
 def max_sub_array_kadane(nums: List[int]) -> int:
     """
-    Alternate solution that modifies array as you iterate.
+    Time: O(n)
+    Space: O(1)
     """
     for i in range(1, len(nums)):
         if nums[i - 1] > 0:
             nums[i] += nums[i - 1]
     return max(nums)
-
-
-nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-print(max_sub_array(nums))  # 6
-
-nums = []
-print(max_sub_array(nums))  # 0

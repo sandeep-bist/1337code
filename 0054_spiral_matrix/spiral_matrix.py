@@ -3,8 +3,8 @@ from typing import List
 
 def spiral_order(matrix: List[List[int]]) -> List[int]:
     """
-    Given a matrix of m x n elements (m rows, n columns), return all elements
-    of the matrix in spiral order.
+    Time: O(m * n)
+    Space: O(m * n)
     """
     res = []
     if not len(matrix):
@@ -33,17 +33,3 @@ def spiral_order(matrix: List[List[int]]) -> List[int]:
         if left > right or top > bottom:
             break
     return res
-
-
-arr1 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-print(spiral_order(arr1))  # [1,2,3,6,9,8,7,4,5]
-arr2 = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12]
-]
-print(spiral_order(arr2))  # [1,2,3,4,8,12,11,10,9,5,6,7]

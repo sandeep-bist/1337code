@@ -1,7 +1,8 @@
 /**
- * Given an array of strings, group anagrams together.
- * @param {string[]} strs
- * @return {string[][]}
+ * Time:    O(m * n * n * log(n))
+ * Space:   O(m * n * n)
+ * @param   {string[]}    strs
+ * @return  {string[][]}
  */
 const groupAnagrams = strs => {
   const map = {}
@@ -15,7 +16,3 @@ const groupAnagrams = strs => {
   }
   return Object.values(map)
 }
-
-const arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
-console.log(groupAnagrams(arr))
-/* [["ate", "eat", "tea"], ["nat", "tan"], ["bat"]] */
