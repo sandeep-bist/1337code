@@ -3,10 +3,8 @@ from typing import List
 
 def exist(board: List[List[str]], word: str) -> bool:
     """
-    Given a 2D board and a word, find if the word exists in the grid.
-    The word can be constructed from letters of sequentially adjacent cell,
-    where "adjacent" cells are those horizontally or vertically neighboring.
-    The same letter cell may not be used more than once.
+    Time:    O(n * 4**L) where L is the length of the word
+    Space:   O(L)
     """
     for i in range(len(board)):
         for j in range(len(board[0])):
@@ -16,9 +14,6 @@ def exist(board: List[List[str]], word: str) -> bool:
 
 
 def dfs(board: List[List[str]], i: int, j: int, count: int, word: str):
-    """
-    Depth-first search.
-    """
     if count == len(word):
         return True
     if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or\
@@ -32,8 +27,3 @@ def dfs(board: List[List[str]], i: int, j: int, count: int, word: str):
              dfs(board, i, j - 1, count + 1, word))
     board[i][j] = tmp
     return found
-
-
-matrix = [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
-print(exist(matrix, "ABCCED"))  # True
-print(exist(matrix, "ABCD"))  # False

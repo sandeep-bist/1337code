@@ -4,9 +4,6 @@
 
 using namespace std;
 
-/**
- * Depth-first search.
- */
 bool dfs(vector<vector<char>> matrix, int r, int c, int index, string word)
 {
     if (index == word.size())
@@ -24,11 +21,10 @@ bool dfs(vector<vector<char>> matrix, int r, int c, int index, string word)
     matrix[r][c] = tmp;
     return found;
 }
+
 /**
- * Given a 2D board and a word, find if the word exists in the grid.
- * The word can be constructed from letters of sequentially adjacent cell,
- * where "adjacent" cells are those horizontally or vertically neighboring.
- * The same letter cell may not be used more than once.
+ * Time: O(n * 4**L) where L is the length of the word
+ * Space: O(L)
  */
 bool exist(vector<vector<char>> matrix, string word)
 {
@@ -37,13 +33,4 @@ bool exist(vector<vector<char>> matrix, string word)
             if (matrix[i][j] == word[0] && dfs(matrix, i, j, 0, word))
                 return true;
     return false;
-}
-
-int main()
-{
-    vector<vector<char>> matrix{
-        {'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
-    cout << exist(matrix, "ABCCED") << endl; // 1
-    cout << exist(matrix, "ABCD") << endl;   // 0
-    return 0;
 }

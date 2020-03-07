@@ -2,7 +2,8 @@
 
 using namespace std;
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -10,16 +11,15 @@ struct TreeNode {
 };
 
 /**
- * Given a binary tree, determine if it is a valid binary search tree (BST).
+ * Time: O(n)
+ * Space: O(n)
  */
-bool isValidBST(TreeNode* root) {
+bool is_valid_bst(TreeNode *root)
+{
     return helper(root, NULL, NULL);
 }
 
-/**
- * Helper func. 
- */
-bool helper(TreeNode* node, int* min, int* max)
+bool helper(TreeNode *node, int *min, int *max)
 {
     if (!node)
         return true;

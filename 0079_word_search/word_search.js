@@ -1,5 +1,4 @@
 /**
- * Depth-first search.
  * @param   {string[][]}    matrix
  * @param   {number}        r
  * @param   {number}        c
@@ -29,10 +28,8 @@ const dfs = (matrix, r, c, index, word) => {
 }
 
 /**
- * Given a 2D board and a word, find if the word exists in the grid.
- * The word can be constructed from letters of sequentially adjacent cell,
- * where "adjacent" cells are those horizontally or vertically neighboring.
- * The same letter cell may not be used more than once.
+ * Time:    O(n * 4**L) where L is the length of the word
+ * Space:   O(L)
  * @param   {string[][]}        matrix
  * @param   {string}            word
  * @returns {boolean}
@@ -43,11 +40,3 @@ const exist = (matrix, word) => {
       if (matrix[i][j] === word[0] && dfs(matrix, i, j, 0, word)) return true
   return false
 }
-
-const matrix = [
-  ["A", "B", "C", "E"],
-  ["S", "F", "C", "S"],
-  ["A", "D", "E", "E"]
-]
-console.log(exist(matrix, "ABCCED")) // true
-console.log(exist(matrix, "ABCD")) // false
