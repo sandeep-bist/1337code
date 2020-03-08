@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/**
+ * Time: O(n * log(n))
+ * Space: O(n)
+ */
 int connectSticks(vector<int> &sticks)
 {
     // Syntax to create a min heap for priority queue
