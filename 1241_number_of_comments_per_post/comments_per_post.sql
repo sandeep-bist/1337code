@@ -1,4 +1,3 @@
-
 SELECT
     S1.sub_id AS post_id,
     COUNT(DISTINCT S2.sub_id) AS number_of_comments
