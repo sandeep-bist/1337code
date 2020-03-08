@@ -4,10 +4,8 @@ import heapq
 
 def reorganize_string(S: str) -> str:
     """
-    Given a string S, check if the letters can be rearranged so that two
-    characters that are adjacent to each other are not the same.
-    If possible, output any possible result.  If not possible, return the
-    empty string.
+    Time: O(n)
+    Space: O(n)
     """
     res = []
     pq = [(-y, x) for x, y in Counter(S).items()]
@@ -24,7 +22,3 @@ def reorganize_string(S: str) -> str:
         p_a, p_b = a, b
     res = "".join(res)
     return res if len(res) == len(S) else ""
-
-
-print(reorganize_string("aab"))  # aba
-print(reorganize_string("aaab"))  # ""

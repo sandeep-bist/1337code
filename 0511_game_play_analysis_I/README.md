@@ -1,6 +1,8 @@
-/*
-Table: Activity
+# Game Play Analysis I
 
+Table: `Activity`
+
+```
 +--------------+---------+
 | Column Name  | Type    |
 +--------------+---------+
@@ -12,12 +14,13 @@ Table: Activity
 (player_id, event_date) is the primary key of this table.
 This table shows the activity of players of some game.
 Each row is a record of a player who logged in and played a number of games (possibly 0) before logging out on some day using some device.
- 
+```
 
 Write an SQL query that reports the first login date for each player.
 
 The query result format is in the following example:
 
+```
 Activity table:
 +-----------+-----------+------------+--------------+
 | player_id | device_id | event_date | games_played |
@@ -37,8 +40,12 @@ Result table:
 | 2         | 2017-06-25  |
 | 3         | 2016-03-02  |
 +-----------+-------------+
-*/
+```
 
-SELECT player_id, MIN(event_date) AS first_login
-FROM Activity
-GROUP BY player_id;
+### Difficulty
+
+Easy
+
+### Tags
+
+#sql
