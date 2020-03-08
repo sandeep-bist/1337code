@@ -26,7 +26,3 @@ func largestUniqueNumber(arr []int) int {
 	}
 	return maxUniq
 }
-
-func main() {
-
-}
