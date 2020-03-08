@@ -4,15 +4,8 @@ from typing import List
 
 def oranges_rotting(grid: List[List[int]]) -> int:
     """
-    In a given grid, each cell can have one of three values:
-    - the value 0 representing an empty cell;
-    - the value 1 representing a fresh orange;
-    - the value 2 representing a rotten orange.
-    Every minute, any fresh orange that is adjacent (4-directionally) to a
-    rotten orange becomes rotten.
-
-    Return the minimum number of minutes that must elapse until no cell has
-    a fresh orange.  If this is impossible, return -1 instead.
+    Time: O(m * n)
+    Space: O(m * n)
     """
     n, m = len(grid), len(grid[0])
     rotten = deque()
@@ -34,13 +27,3 @@ def oranges_rotting(grid: List[List[int]]) -> int:
                     grid[x][y] = 2
         minutes += 1
     return max(0, minutes - 1) if not fresh else -1
-
-
-grid1 = [[2, 1, 1], [1, 1, 0], [0, 1, 1]]
-print(oranges_rotting(grid1))  # 4
-
-grid2 = [[2, 1, 1], [0, 1, 1], [1, 0, 1]]
-print(oranges_rotting(grid2))  # -1
-
-grid3 = [[0, 2]]
-print(oranges_rotting(grid3))  # 0

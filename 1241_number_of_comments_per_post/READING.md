@@ -1,6 +1,8 @@
-/*
-Table: Submissions
+# Number of Comments per Post
 
+Table: `Submissions`
+
+```
 +---------------+----------+
 | Column Name   | Type     |
 +---------------+----------+
@@ -11,7 +13,7 @@ There is no primary key for this table, it may have duplicate rows.
 Each row can be a post or comment on the post.
 parent_id is null for posts.
 parent_id for comments is sub_id for another post in the table.
- 
+```
 
 Write an SQL query to find number of comments per each post.
 
@@ -25,6 +27,7 @@ Submissions may contain duplicate posts. You should treat them as one post.
 
 The query result format is in the following example:
 
+```
 Submissions table:
 +---------+------------+
 | sub_id  | parent_id  |
@@ -57,24 +60,12 @@ The post with id 2 has two comments in the table with id 5 and 10.
 The post with id 12 has no comments in the table.
 The comment with id 6 is a comment on a deleted post with id 7 so we ignored
 it.
-*/
+```
 
-SELECT
-    S1.sub_id AS post_id,
-    COUNT(DISTINCT S2.sub_id) AS number_of_comments
-FROM Submissions S1
-LEFT JOIN Submissions S2
-ON S1.sub_id = S2.parent_id
-WHERE S1.parent_id IS NULL
-GROUP BY S1.sub_id;
+### Difficulty
 
--- OR
+Easy
 
-SELECT
-    s1.sub_id AS post_id,
-    (SELECT COUNT(DISTINCT(s2.sub_id))
-     FROM Submissions s2
-     WHERE s2.parent_id = s1.sub_id) AS number_of_comments
-FROM Submissions s1
-WHERE s1.parent_id IS null
-GROUP BY s1.sub_id;
+### Tags
+
+#sql
