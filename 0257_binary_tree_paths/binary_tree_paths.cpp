@@ -14,7 +14,7 @@ struct TreeNode
  * Time: O(n)
  * Space: O(n) 
  */
-vector<string> binaryTreePaths(TreeNode *root)
+vector<string> binary_tree_paths(TreeNode *root)
 {
     vector<string> res;
     if (!root)
