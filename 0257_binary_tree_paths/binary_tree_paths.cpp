@@ -10,6 +10,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+/**
+ * Time: O(n)
+ * Space: O(n) 
+ */
 vector<string> binaryTreePaths(TreeNode *root)
 {
     vector<string> res;
@@ -19,10 +23,6 @@ vector<string> binaryTreePaths(TreeNode *root)
     return res;
 }
 
-/**
- * Time: O(n)
- * Space: O(n) 
- */
 void dfs(TreeNode *node, vector<string> &arr, string curr)
 {
     if (!node->left && !node->right)
