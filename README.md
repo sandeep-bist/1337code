@@ -4,20 +4,33 @@
 
 ## Stats
 
-How to count the number of problems solved:
+How to count the number of problems solved (count all non-hidden directories):
 `ls -l | grep "^d" | wc -l`
+
+As of 3/31/20: **106**
 
 How to find the number of solutions in a given language:
 `find ./ -name "*.{language_extension}" | wc -l`
 
 As of 3/31/20:
-- Total: 106
+
 - Python: 87
 - C++: 50
 - Javascript: 31
 - SQL: 11
 - Golang: 8
 - C: 2
+
+```mermaid
+pie
+title Breakdown of Languages Used
+    "Python" : 87
+    "C++" : 50  
+    "Javascript" : 31
+    "SQL": 11
+    "Golang": 8
+    "C" : 2
+```
 
 ## Author
 
