@@ -1,4 +1,4 @@
-def reverseWords(self, s: str) -> str:
+def reverse_words(self, s: str) -> str:
     """
     Time: O(n)
     Space: O(n)
