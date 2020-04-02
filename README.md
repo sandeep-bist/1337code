@@ -4,12 +4,14 @@ This repository contains my solutions for various problems on Leetcode.
 
 ## Stats
 
-How to count the number of problems solved (count of all non-hidden directories):
+Number of problems solved (count of all non-hidden directories):
+
 `ls -l | grep "^d" | wc -l`
 
 As of 3/31/20: **106**
 
-How to find the number of solutions in a given language:
+Number of solutions in a given language:
+
 `find ./ -name "*.{language_extension}" | wc -l`
 
 As of 3/31/20:
