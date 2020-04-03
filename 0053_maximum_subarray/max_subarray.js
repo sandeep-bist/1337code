@@ -1,8 +1,6 @@
 /**
- * Time:    O(n)
- * Space:   O(1)
- * @param   {number[]}  nums
- * @returns {number}
+ * Time: O(n)
+ * Space: O(1)
  */
 const maxSubArray = nums => {
   if (!nums.length) return 0

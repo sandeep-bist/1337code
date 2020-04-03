@@ -8,7 +8,7 @@ using namespace std;
  * Time: O(n)
  * Space: O(1)
  */
-int max_sub_array(vector<int> &nums)
+int max_subarray(vector<int> &nums)
 {
     if (!nums.size())
         return 0;
@@ -26,7 +26,7 @@ int max_sub_array(vector<int> &nums)
  * Time: O(n)
  * Space: O(1)
  */
-int max_sub_array_kadane(vector<int> &nums)
+int max_subarray_kadane(vector<int> &nums)
 {
     if (!nums.size())
         return 0;

@@ -1,7 +1,7 @@
 from typing import List
 
 
-def max_sub_array(nums: List[int]) -> int:
+def max_subarray(nums: List[int]) -> int:
     """
     Time: O(n)
     Space: O(1)
@@ -15,7 +15,7 @@ def max_sub_array(nums: List[int]) -> int:
     return max_so_far
 
 
-def max_sub_array_kadane(nums: List[int]) -> int:
+def max_subarray_kadane(nums: List[int]) -> int:
     """
     Time: O(n)
     Space: O(1)
