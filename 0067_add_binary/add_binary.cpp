@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+/**
+ * Time: O(m + n)
+ * Space: O(m + n)
+ */
 string add_binary(string a, string b)
 {
     string res = "";
