@@ -5,7 +5,7 @@ from typing import List
 def backspace_compare(S: str, T: str) -> bool:
     """
     Time: O(n)
-    Space: O(1)
+    Space: O(n)
     """
     return backspace(list(S)) == backspace(list(T))
 
