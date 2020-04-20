@@ -8,7 +8,7 @@ Number of problems solved (count of all non-hidden directories):
 
 `ls -l | grep "^d" | wc -l`
 
-As of 4/6/20: **125**
+As of 4/20/20: **138**
 
 Number of solutions in a given language:
 
@@ -16,11 +16,11 @@ Number of solutions in a given language:
 
 As of 4/6/20:
 
-- Python: 107
-- C++: 59
-- Javascript: 33
+- Python: 120
+- C++: 66
+- Javascript: 35
 - SQL: 11
-- Golang: 14
+- Golang: 28
 - C: 2
 
 ## Author
