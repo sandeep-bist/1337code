@@ -11,27 +11,22 @@ func findAnagrams(s string, p string) []int {
 	for i := 0; i < len(p); i++ {
 		pCount[p[i]]++
 	}
-	begin := 0
-	end := 0
+	begin, end := 0, 0
 	for end < len(s) {
-		val, ok := pCount[s[end]]
-		if ok {
-			pCount[s[end]]--
-			if val > 0 {
-				counter--
-			}
+		val := pCount[s[end]]
+		pCount[s[end]]--
+		if val > 0 {
+			counter--
 		}
 		end++
 		if counter == 0 {
 			result = append(result, begin)
 		}
 		if end >= len(p) {
-			val, ok := pCount[s[begin]]
-			if ok {
-				pCount[s[begin]]++
-				if val >= 0 {
-					counter++
-				}
+			val := pCount[s[begin]]
+			pCount[s[begin]]++
+			if val >= 0 {
+				counter++
 			}
 			begin++
 		}
