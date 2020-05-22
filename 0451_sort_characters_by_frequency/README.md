@@ -50,4 +50,4 @@ Medium
 
 ### Tags
 
-#string #hash-table #heap
+#string #hash-table #bucket-sort
