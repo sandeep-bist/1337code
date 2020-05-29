@@ -5,7 +5,7 @@ def max_uncrossed_lines(A: List[int], B: List[int]) -> int:
     """
     Time: O(n * m)
     Space: O(n * m)
-    Bottom down approach.
+    Bottom up approach.
     """
     A = [0] + A
     B = [0] + B
