@@ -1,0 +1,18 @@
+package main
+
+/**
+ * Time: O(n)
+ * Space: O(1)
+ */
+func reverseString(s []byte)  {
+    lo, hi := 0, len(s) - 1
+    for lo < hi {
+        s[lo], s[hi] = s[hi], s[lo]
+        lo++
+        hi--
+    }
+}
+
+func main() {
+
+}
