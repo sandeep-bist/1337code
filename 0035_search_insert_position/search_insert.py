@@ -1,3 +1,4 @@
+from bisect import bisect_left
 from typing import List
 
 
@@ -17,3 +18,7 @@ def search_insert(nums: List, target: int) -> int:
         else:
             start = mid + 1
     return start
+
+
+def search_insert_bisect(nums: List[int], target: int) -> int:
+    return bisect_left(nums, target)
