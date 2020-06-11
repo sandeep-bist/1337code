@@ -121,7 +121,7 @@ class LRUCacheOD:
 
     def get(self, key: int) -> str:
         """
-        Gets the value stored at given key. Moves key to the front of cache.
+        Gets the value stored at given key. Moves key to the end of the cache queue.
         """
         if key not in self.cache:
             return -1
