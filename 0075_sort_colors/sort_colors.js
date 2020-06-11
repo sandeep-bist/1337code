@@ -1,8 +1,6 @@
 /**
  * Time:    O(n)
  * Space:   O(1)
- * @param   {number[]} nums
- * @return
  */
 const sortColors = nums => {
   let p0, c, p2
