@@ -1,3 +1,5 @@
+package main
+
 func exist(board [][]byte, word string) bool {
 	for i := 0; i < len(board); i++ {
 		for j := 0; j < len(board[0]); j++ {
@@ -28,4 +30,8 @@ func dfs(board [][]byte, index int, r int, c int, word string) bool {
 		dfs(board, index+1, r, c-1, word))
 	board[r][c] = tmp
 	return found
+}
+
+func main() {
+
 }
