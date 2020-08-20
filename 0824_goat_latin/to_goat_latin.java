@@ -1,3 +1,5 @@
+// Time: O(n**2)
+// Space: O(n**2)
 class Solution {
     public String toGoatLatin(String S) {
         Set<Character> vowels = new HashSet<>();

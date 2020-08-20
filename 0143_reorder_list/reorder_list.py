@@ -18,12 +18,12 @@ def reorder_list(head: ListNode) -> None:
         slow = slow.next
         fast = fast.next.next
 
-    # reverse the second part of the list [Problem 206]
+    # reverse the second part of the list
     prev, curr = None, slow
     while curr:
         curr.next, prev, curr = prev, curr, curr.next
 
-    # merge two sorted linked lists [Problem 21]
+    # merge two sorted linked lists
     first, second = head, prev
     while second.next:
         first.next, first = second, first.next
