@@ -14,17 +14,19 @@ class Solution {
             maze[x][y] = 2;
             for (int[] dir : dirs) {
                 int r = x, c = y;
-                while (r >= 0 && c >= 0 && r < maze.length && c < maze[0].length && maze[r][c] != 1) {
+                while (isValidPath(maze, r + dir[0], c + dir[1])) {
                     r += dir[0];
                     c += dir[1];
                 }
-                r -= dir[0];
-                c -= dir[1];
                 if (maze[r][c] == 0) {
                     queue.add(new int[] { r, c });
                 }
             }
         }
         return false;
+    }
+
+    private boolean isValidPath(int[][] maze, int row, int col) {
+        return row >= 0 && col >= 0 && row < maze.length && col < maze[0].length && maze[row][col] != 1;
     }
 }
