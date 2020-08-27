@@ -1,9 +1,5 @@
-/**
- * Time:    O(n)
- * Space:   O(n)
- * @param   {String} str
- * @return  {Boolean}
- */
+// Time:    O(n)
+// Space:   O(n)
 const isValid = str => {
   const map = {
     "]": "[",
