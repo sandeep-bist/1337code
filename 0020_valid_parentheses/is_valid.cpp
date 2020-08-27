@@ -4,10 +4,8 @@
 
 using namespace std;
 
-/**
- * Time: O(n)
- * Space: O(n)
- */
+// Time: O(n)
+// Space: O(n)
 bool is_valid(string s)
 {
     stack<char> stack;
