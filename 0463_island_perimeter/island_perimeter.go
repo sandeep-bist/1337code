@@ -1,5 +1,7 @@
 package main
 
+// Time: O(m * n)
+// Space: O(1)
 func islandPerimeter(grid [][]int) int {
 	r, c, res := len(grid), len(grid[0]), 0
 	for i := 0; i < r; i++ {
