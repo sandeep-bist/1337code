@@ -8,19 +8,17 @@ Number of problems solved (count of all non-hidden directories):
 
 `ls -l | grep "^d" | wc -l`
 
-As of 8/14/20: **237**
+As of 8/31/20: **258**
 
 Number of solutions in a given language:
 
 `find ./ -name "*.{language_extension}" | wc -l`
 
-As of 8/6/20:
-
-- Python: 209
-- Go: 103
+- Python: 238
+- Go: 109
 - C++: 71
-- Javascript: 38
-- Java: 18
+- Java: 47
+- Javascript: 43
 - SQL: 11
 - C: 3
 
