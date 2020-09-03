@@ -26,10 +26,8 @@ vector<int> kmp_preprocess(string needle)
     return kmp;
 }
 
-/**
- * Time: O(m + n)
- * Space: O(m)
- */
+// Time: O(n)
+// Space: O(n)
 int strstr(string needle, string haystack)
 {
     if (!needle.size() && !haystack.size())
