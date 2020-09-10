@@ -20,7 +20,6 @@ class Solution {
                 }
                 hm.put(s, hm.getOrDefault(s, 0) + 1);
                 hm.put(g, hm.getOrDefault(g, 0) - 1);
-                System.out.println(hm);
             }
         }
         return Integer.toString(bulls) + "A" + Integer.toString(cows) + "B";
