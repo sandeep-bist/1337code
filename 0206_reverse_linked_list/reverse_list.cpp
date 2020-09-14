@@ -9,10 +9,8 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-/**
- * Time: O(n)
- * Space: O(1)
- */
+// Time: O(n)
+// Space: O(1)
 ListNode *reverse_list(ListNode *head)
 {
     ListNode *prev, *curr, *next;
