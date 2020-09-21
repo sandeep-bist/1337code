@@ -41,3 +41,11 @@ Output: true
 - 1 <= trips[i][0] <= 100
 - 0 <= trips[i][1] < trips[i][2] <= 1000
 - 1 <= capacity <= 100000
+
+### Difficulty
+
+Medium
+
+### Tag
+
+#bucket-sort
