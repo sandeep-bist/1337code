@@ -3,8 +3,8 @@ from typing import List
 
 def rob_again(nums: List[int]) -> int:
     """
-    Time: O(2 * n)
-    Space: O(2 * n)
+    Time: O(n)
+    Space: O(1)
     """
     if len(nums) == 1:
         return nums[0]

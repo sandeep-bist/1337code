@@ -15,10 +15,8 @@ int rob(vector<int> &nums)
     return curr;
 }
 
-/**
- * Time: O(2 * n)
- * Space: O(2 * n)
- */
+// Time: O(n)
+// Space: O(1)
 int rob_again(vector<int> &nums)
 {
     vector<int> exclude_first, exclude_last;
