@@ -1,9 +1,3 @@
-/**
- * Time:    O(n)
- * Space:   O(n)
- * @param   {number[]}  nums
- * @return  {number}
- */
 const removeDuplicates = nums => {
   const count = {}
   let i = 0
