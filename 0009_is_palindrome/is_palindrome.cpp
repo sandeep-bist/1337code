@@ -8,13 +8,18 @@ using namespace std;
  */
 bool is_palindrome(int x)
 {
-    if (x < 0 || (x && x % 10 == 0))
+    if (x < 0 || isFactorOfTen(x)) {
         return false;
-    int rev = 0;
-    while (x > rev)
+    }
+    int reverse = 0;
+    while (x > reverse)
     {
-        rev = (rev * 10) + x % 10;
+        reverse = (reverse * 10) + x % 10;
         x /= 10;
     }
-    return x == rev || x == (rev / 10);
+    return x == reverse || x == (reverse / 10);
+}
+
+bool isFactorOfTen(int x) {
+    return x && x % 10 == 0;
 }
