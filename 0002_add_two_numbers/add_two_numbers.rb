@@ -1,3 +1,11 @@
+class ListNode
+    attr_accessor :val, :next
+    def initialize(val = 0, _next = nil)
+        @val = val
+        @next = _next
+    end
+end
+
 def add_two_numbers(l1, l2, carry = 0)
     return nil if (l1.nil? and l2.nil? and carry.zero?)
     tmp = (l1&.val || 0) + (l2&.val || 0) + carry
