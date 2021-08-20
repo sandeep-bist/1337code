@@ -11,3 +11,5 @@ def add_binary_alt(a: str, b: str) -> str:
     while y:
         x, y = x ^ y, (x & y) << 1
     return bin(x)[2:]
+
+
