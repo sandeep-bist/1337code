@@ -11,9 +11,8 @@ def solve(board):
     n = len(board)
     for r in range(n):
         for c in range(n):
-            if board[r][c] != '.':
-                continue
-            return try_nums(board, r, c)
+            if board[r][c] == '.':
+                return try_nums(board, r, c)
     return True
 
 def try_nums(board, r, c):
