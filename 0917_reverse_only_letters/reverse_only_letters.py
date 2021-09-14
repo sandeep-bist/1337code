@@ -1,23 +1,23 @@
 from collections import deque
 
 
-def reverse_only_letters(string: str) -> str:
+def reverse_only_letters(s: str) -> str:
     """
     Time: O(n)
     Space: O(n)
     """
-    i, j = 0, len(string) - 1
-    string = list(string)
+    i = 0
+    j = len(s) - 1
+    res = list(s)
     while i < j:
-        if string[i].isalpha() and string[j].isalpha():
-            string[i], string[j] = string[j], string[i]
+        while i < j and not res[i].isalpha():
             i += 1
+        while i < j and not res[j].isalpha():
             j -= 1
-        if not string[j].isalpha():
-            j -= 1
-        if not string[i].isalpha():
-            i += 1
-    return "".join(string)
+        res[i], res[j] = res[j], res[i]
+        i += 1
+        j -= 1
+    return "".join(res)
 
 
 def reverse_only_letters_alt(string: str) -> str:
