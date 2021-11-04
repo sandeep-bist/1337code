@@ -5,7 +5,7 @@ class TreeNode:
         self.right = right
 
 
-def sum_of_left_leaves(self, root: TreeNode) -> int:
+def sum_of_left_leaves(root: TreeNode) -> int:
     """
     Time: O(n)
     Space: O(n)
