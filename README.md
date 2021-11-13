@@ -4,23 +4,14 @@ This repository contains my solutions for various problems on Leetcode.
 
 ## Stats
 
-Number of problems solved (count of all non-hidden directories):
-
-`ls -l | grep "^d" | wc -l`
-
-As of 12/17/20: **355**
-
-Number of solutions in a given language:
-
-`find ./ -name "*.{language_extension}" | wc -l`
-
-- Python: 332
-- Java: 161
-- Go: 109
-- C++: 71
-- Javascript: 43
-- SQL: 11
-- C: 3
+Total number of problems: 404
+Python: 385
+Java: 238
+Go: 108
+C++: 71
+Javascript: 45
+Ruby: 26
+SQL: 11
 
 ## Author
 
